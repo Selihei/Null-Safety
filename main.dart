@@ -20,11 +20,17 @@ rains.add(weatherData[0]['rain'] ?? 0);
 rains.add(weatherData[1]['rain'] ?? 0);
 rains.add(weatherData[2]['rain'] ?? 0);
 
+winds.add(weatherData[0]['wind'] ?? 0);
+winds.add(weatherData[1]['wind'] ?? 0);
+winds.add(weatherData[2]['wind'] ?? 0);
+
 
 // Berechnnug der Durchschnitte
 double avgTemp = (temps[0] + temps[1] + temps[2]) / temps.length;
 double avgRain = (rains[0] + rains[1] + rains[2]) / rains.length;
-print('Durchschnittstemperatur: $avgTemp °C');
+double avgWind = (winds[0] + winds[1] + winds[2]) / winds.length;
+print('Durchschnitt Temperatur: $avgTemp °C');
 print('Durchschnitt Niederschlagsmenge: $avgRain mm');
+print('Durchschnitt Windgeschwindigkeit: $avgWind km/h');
 }
 
